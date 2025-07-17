@@ -12,6 +12,11 @@ import com.example.active.RadioService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import com.example.active.SongInfoFetcher
+import com.example.active.SongInfo
+
+
+
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
