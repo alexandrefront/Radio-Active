@@ -10,9 +10,10 @@ import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkRequest
 import android.os.IBinder
+import android.support.v4.media.session.MediaSessionCompat
+import android.support.v4.media.session.PlaybackStateCompat
 import androidx.core.app.NotificationCompat
-import androidx.media.session.MediaButtonReceiver
-import androidx.media.session.MediaSessionCompat
+import com.example.active.NotificationUtils
 
 class RadioService : Service() {
 
@@ -58,7 +59,7 @@ class RadioService : Service() {
     }
 
     private fun registerNetworkCallback() {
-        connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        connectivityManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val request = NetworkRequest.Builder().build()
         connectivityManager.registerNetworkCallback(request, object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: Network) {

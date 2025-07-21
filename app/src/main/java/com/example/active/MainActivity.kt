@@ -1,4 +1,4 @@
-package com.radio.active
+package com.example.active
 
 import android.annotation.SuppressLint
 import android.content.*
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         // register the receiver for updates
         registerReceiver(
-            songInfoReceiver, IntentFilter("com.radio.UPDATE_SONG_INFO")
+            songInfoReceiver, IntentFilter("com.example.UPDATE_SONG_INFO")
         )
     }
 

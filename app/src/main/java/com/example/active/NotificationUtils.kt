@@ -1,4 +1,4 @@
-package com.radio.active
+package com.example.active
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -7,10 +7,13 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.support.v4.media.MediaMetadataCompat
+import android.support.v4.media.session.MediaSessionCompat
 import androidx.core.app.NotificationCompat
 import androidx.media.session.MediaButtonReceiver
 import androidx.media.app.NotificationCompat.MediaStyle
-import androidx.media.session.MediaSessionCompat
+import com.example.active.R
+
 
 object NotificationUtils {
 
@@ -64,3 +67,11 @@ object NotificationUtils {
         }
     }
 }
+
+/*
+private fun Unit.addAction(action: Any) {}
+
+private fun Unit.setVisibility(visibilityPublic: Int) {
+    TODO("Not yet implemented")
+}
+*/

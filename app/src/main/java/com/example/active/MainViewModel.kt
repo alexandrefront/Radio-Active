@@ -1,4 +1,4 @@
-package com.radio.active
+package com.example.active
 
 import android.app.Application
 import android.content.Context
@@ -19,6 +19,8 @@ import com.example.active.SongInfo
 
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val fetcher = SongInfoFetcher()
 
     companion object {
         const val ACTION_PLAY = "ACTION_PLAY"
@@ -59,6 +61,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     /**
      * Periodically refreshes song info every 10 seconds.
      */
+    /*
     fun startRefreshingInfo() {
         viewModelScope.launch(Dispatchers.IO) {
             while (true) {
@@ -67,4 +70,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
     }
+    */
+    fun loadSongInfo(url: String) {
+        viewModelScope.launch {
+            try {
+                val info = fetcher.fetch(url)  // Now this resolves!
+            } catch (e: Exception) {
+                // Handle errors
+            }
+        }
+    }
+
 }

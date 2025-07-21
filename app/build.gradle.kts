@@ -59,4 +59,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation("com.squareup.moshi:moshi:1.15.2")
+    implementation("androidx.media:media:1.6.0")
+    implementation ("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation ("com.squareup.moshi:moshi-kotlin:1.14.0") // needed for KotlinJsonAdapterFactory :contentReference[oaicite:4]{index=4}
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
 }
