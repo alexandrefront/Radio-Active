@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Active</string>
-    <string name="thumb_desc">thumb</string>
-    <string name="artist_placeholder">artist</string>
-    <string name="title_placeholder">title</string>
-    <string name="play_pause_desc">play pause</string>
-</resources>
